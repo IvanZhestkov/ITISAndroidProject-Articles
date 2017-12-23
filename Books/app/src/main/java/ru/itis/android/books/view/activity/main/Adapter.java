@@ -57,7 +57,7 @@ public class Adapter extends RecyclerView.Adapter<BookViewHolder> {
         if(item.getImageURL() != null) {
             Glide.with(context)
                     .load(item.getImageURL())
-                    .transition(DrawableTransitionOptions.withCrossFade(5000))
+                    .transition(DrawableTransitionOptions.withCrossFade(2000))
                     .into(holder.image);
         }
 

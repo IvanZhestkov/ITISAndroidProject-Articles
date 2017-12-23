@@ -139,15 +139,16 @@ public class MainActivity extends BaseActivity implements OnArticleClickListener
         quitDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                // TODO Auto-generated method stub
-                finish();
+// TODO Auto-generated method stub
+                android.os.Process.killProcess(android.os.Process.myPid());
+// MainActivity.this.finish();
             }
         });
 
         quitDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                // TODO Auto-generated method stub
+// TODO Auto-generated method stub
             }
         });
 
