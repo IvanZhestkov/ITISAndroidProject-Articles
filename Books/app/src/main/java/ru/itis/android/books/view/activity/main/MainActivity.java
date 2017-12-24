@@ -69,7 +69,7 @@ public class MainActivity extends BaseActivity implements OnArticleClickListener
     private void initView() {
         toolbar = findViewById(getToolbarId());
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("");
+        getSupportActionBar().setTitle("The New York Times Articles");
 
         unbinder = ButterKnife.bind(this);
         manager = new LinearLayoutManager(this);

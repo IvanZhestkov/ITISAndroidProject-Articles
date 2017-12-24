@@ -1,5 +1,6 @@
 package ru.itis.android.books.view.base;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import ru.itis.android.books.R;
 
 import ru.itis.android.books.model.bean.Article;
 import ru.itis.android.books.presenter.Presenter;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
  * Created by User on 11.12.2017.
@@ -37,6 +39,11 @@ public abstract class BaseActivity extends AppCompatActivity implements MainView
 
     protected int getToolbarId() {
         return R.id.toolbar;
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
 
